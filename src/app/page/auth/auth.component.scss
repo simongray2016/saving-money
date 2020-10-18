@@ -1,0 +1,23 @@
+.container {
+  .logo {
+    .image {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .title {
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .white-space {
+    height: 100px;
+    background: white;
+    border-radius: 5px;
+    margin: 16px;
+    overflow: hidden;
+  }
+}

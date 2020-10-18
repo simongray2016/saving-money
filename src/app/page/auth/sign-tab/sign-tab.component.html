@@ -1,0 +1,20 @@
+<div class="container">
+  <Tabs class="tabs" [page]="2" [useOnPan]="false" [swipeable]="false" [tabTitleSize]="100">
+    <TabPane [title]="titleTemplate">
+      <ng-template #titleTemplate>
+        <div>First Tab</div>
+      </ng-template>
+      <div>
+        Content of first tab
+      </div>
+    </TabPane>
+    <TabPane [title]="titleTemplate1">
+      <ng-template #titleTemplate1>
+        <div>Second Tab</div>
+      </ng-template>
+      <div>
+        Content of second tab
+      </div>
+    </TabPane>
+  </Tabs>
+</div>

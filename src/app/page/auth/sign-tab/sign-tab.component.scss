@@ -1,0 +1,18 @@
+@import 'src/styles/variables.scss';
+
+.container {
+  ::ng-deep{
+    .am-tabs-default-bar {
+      &-top, &-tab {
+        border: none;
+      }
+      &-tab-active {
+        color: $primary
+      }
+      &-underline {
+        width: 40px;
+        border: 1px solid $primary;
+      }
+    }
+  }
+}
