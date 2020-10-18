@@ -1,0 +1,29 @@
+@import 'src/variables.scss';
+
+:host {
+  background: $primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+}
