@@ -18,7 +18,7 @@ export function themeFactory(themeService: UiStyleToggleService) {
 @NgModule({
   declarations: [
     AppComponent,
-    LaunchScreenDirective,
+    LaunchScreenDirective
   ],
   imports: [
     BrowserModule,

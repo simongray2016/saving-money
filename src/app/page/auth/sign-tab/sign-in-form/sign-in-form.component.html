@@ -3,13 +3,7 @@
     <form [formGroup]="signInForm">
       <app-form-field>
         <form-field-label>Phone number</form-field-label>
-        <input
-          formControlName="phoneNumber"
-          appInput
-          type="text"
-          maxlength="11"
-          placeholder="Enter your phone number"
-        />
+        <input formControlName="phoneNumber" appInput type="number" placeholder="Enter your phone number"/>
       </app-form-field>
       <app-form-field>
         <form-field-label>Password</form-field-label>
@@ -17,7 +11,7 @@
         <suffix-icon src="../../../../../assets/icShowPass.svg"></suffix-icon>
       </app-form-field>
       <Flex style="margin-top: 11px" [align]="'center'" [justify]="'between'">
-        <app-checkbox (onChange)="remember.setValue($event)" >Remember</app-checkbox>
+        <app-checkbox (onChange)="remember.setValue($event)">Remember</app-checkbox>
         <div class="forgot-password">Forgot password?</div>
       </Flex>
       <div class="sign-in-form-submit">

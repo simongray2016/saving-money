@@ -9,6 +9,7 @@ import { SignInFormComponent } from './sign-tab/sign-in-form/sign-in-form.compon
 import { FormFieldModule } from '../../components/form-field/form-field.module';
 import { CheckboxModule } from './../../components/checkbox/checkbox.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FlexModule,
     ButtonModule,
     CheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DirectivesModule
   ]
 })
 export class AuthModule { }
