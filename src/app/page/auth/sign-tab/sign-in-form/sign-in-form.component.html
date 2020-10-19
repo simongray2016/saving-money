@@ -3,7 +3,8 @@
     <form [formGroup]="signInForm">
       <app-form-field>
         <form-field-label>Phone number</form-field-label>
-        <input formControlName="phoneNumber" appInput type="number" placeholder="Enter your phone number"/>
+        <input formControlName="phoneNumber" appInput type="tel" maxlength="10"
+          placeholder="Enter your phone number" />
       </app-form-field>
       <app-form-field>
         <form-field-label>Password</form-field-label>
