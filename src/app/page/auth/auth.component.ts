@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._router.navigate(['sign-in'], {relativeTo: this._route});
+    this._router.navigate(['sign-in'], {relativeTo: this._route, replaceUrl: true});
   }
 
 }
