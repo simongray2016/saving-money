@@ -1,20 +1,16 @@
 <div class="container">
-  <Tabs class="tabs" [page]="2" [useOnPan]="false" [swipeable]="false" [tabTitleSize]="100">
-    <TabPane [title]="titleTemplate">
-      <ng-template #titleTemplate>
-        <div>First Tab</div>
+  <Tabs [page]="2" [useOnPan]="false" [swipeable]="false" [tabTitleSize]="70">
+    <TabPane [title]="signIn">
+      <ng-template #signIn>
+        <div class="tab-title">Sign in</div>
       </ng-template>
-      <div>
-        Content of first tab
-      </div>
+      <app-sign-in-form></app-sign-in-form>
     </TabPane>
-    <TabPane [title]="titleTemplate1">
-      <ng-template #titleTemplate1>
-        <div>Second Tab</div>
+    <TabPane [title]="signUp">
+      <ng-template #signUp>
+        <div class="tab-title">Sign up</div>
       </ng-template>
-      <div>
-        Content of second tab
-      </div>
+      <app-sign-in-form></app-sign-in-form>
     </TabPane>
   </Tabs>
 </div>

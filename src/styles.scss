@@ -1,8 +1,24 @@
+@import "styles/variables";
+@import "styles/animations";
+@import "styles/theme";
+
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+
 }
 
-h1 {
-  font-size: 20px;
+body {
+  font-size: 14px;
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
 }

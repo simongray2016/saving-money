@@ -6,13 +6,39 @@
       &-top, &-tab {
         border: none;
       }
-      &-tab-active {
-        color: $primary
+      &-tab {
+        color: $medium-grey;
       }
+      &-tab-active {
+        color: black
+      };
       &-underline {
-        width: 40px;
-        border: 1px solid $primary;
+        border: none;
+        background: $primary;
+        height: 4px;
+        &::before {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 4px;
+          background: white;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 4px;
+          background: white;
+          margin-left: 55px;
+          margin-top: -4px;
+        }
       }
     }
+  }
+
+  .tab-title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
   }
 }

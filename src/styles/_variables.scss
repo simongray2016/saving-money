@@ -7,3 +7,7 @@ $dark-grey: #616161;
 $medium-grey: #9e9e9e;
 $light-grey: #E0E0E0;
 $supper-light-grey: #ECEFF1;
+
+$colors: (
+  --background: ($primary, $dark-grey)
+)

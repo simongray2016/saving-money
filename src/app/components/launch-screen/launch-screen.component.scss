@@ -1,4 +1,4 @@
-@import 'src/variables.scss';
+@import 'src/styles/variables.scss';
 
 :host {
   background: $primary;
@@ -8,6 +8,7 @@
   width: 100vw;
   height: 100vh;
   transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
 }
 
 .logo {
