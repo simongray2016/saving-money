@@ -1,0 +1,7 @@
+<Flex class="checkbox-container" [align]="'center'">
+  <input [checked]="isChecked" (change)="emitOnChange($event)" id="checkbox" class="checkbox" type="checkbox" name="checkbox">
+  <div class="checkbox-icon"></div>
+  <label class="checkbox-label" for="checkbox">
+    <ng-content></ng-content>
+  </label>
+</Flex>

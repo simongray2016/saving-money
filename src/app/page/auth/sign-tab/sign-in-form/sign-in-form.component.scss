@@ -2,4 +2,18 @@
 
 .container {
   padding: 20px;
+  .sign-in-form {
+    .forgot-password {
+      color: $primary;
+      font-weight: bold;
+    }
+    &-submit {
+      margin: 40px 0 20px 0;
+      &-button {
+        width: 160px;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+    }
+  }
 }

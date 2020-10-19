@@ -1,4 +1,7 @@
 <div class="form-field">
-    <ng-content select="app-label"></ng-content>
-    <ng-content select="input"></ng-content>
+    <ng-content select="form-field-label"></ng-content>
+    <div class="form-field-input">
+      <ng-content select="input"></ng-content>
+      <ng-content select="suffix-icon"></ng-content>
+    </div>
 </div>

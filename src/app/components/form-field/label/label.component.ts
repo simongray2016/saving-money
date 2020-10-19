@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-label',
+  selector: 'form-field-label',
   templateUrl: './label.component.html',
   styleUrls: ['./label.component.scss']
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInFormComponent implements OnInit {
 
-  constructor() { }
+  signInForm: FormGroup;
+
+  constructor(
+    public _formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.initSignInGroup();
+  }
+
+  get remember(): AbstractControl {
+    return this.signInForm.controls.remember;
+  }
+
+  initSignInGroup(): void {
+    this.signInForm = this._formBuilder.group({
+      phoneNumber: null,
+      password: null,
+      remember: false
+    });
   }
 
 }
