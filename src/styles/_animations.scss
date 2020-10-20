@@ -1,3 +1,16 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-colors-transition {
   transition: color 2s, background 2s;
+}
+
+.animation-spin-loading {
+  animation: spin 1s linear infinite;
 }

@@ -1,0 +1,10 @@
+@import "../animations";
+
+.icon {
+  &-loading {
+    display: block;
+    width: 30px;
+    height: 30px;
+    @extend .animation-spin-loading
+  }
+}

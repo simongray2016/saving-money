@@ -4,7 +4,7 @@
       <ng-template #signIn>
         <div class="tab-title">Sign in</div>
       </ng-template>
-      <app-sign-in-form></app-sign-in-form>
+      <app-sign-in-form (onLoading)="setIsLoading($event)"></app-sign-in-form>
     </TabPane>
     <TabPane [title]="signUp">
       <ng-template #signUp>
@@ -13,4 +13,5 @@
       Content here
     </TabPane>
   </Tabs>
+  <div *ngIf="isLoading" class="overlay"></div>
 </div>

@@ -3,21 +3,46 @@
     <form [formGroup]="signInForm">
       <app-form-field>
         <form-field-label>Phone number</form-field-label>
-        <input formControlName="phoneNumber" appInput type="tel" maxlength="10"
-          placeholder="Enter your phone number" />
+        <input
+          formControlName="phoneNumber"
+          appInput
+          type="tel"
+          maxlength="10"
+          placeholder="Enter your phone number"
+        />
       </app-form-field>
       <app-form-field>
         <form-field-label>Password</form-field-label>
-        <input formControlName="password" appInput type="password" placeholder="Enter your password" />
-        <suffix-icon src="../../../../../assets/icShowPass.svg"></suffix-icon>
+        <input
+          formControlName="password"
+          appInput
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Enter your password"
+        />
+        <suffix-icon
+          (click)="toggleShowingPassword()"
+          [src]="showPassword ? icHidePass : icShowPass"
+        ></suffix-icon>
       </app-form-field>
       <Flex style="margin-top: 11px" [align]="'center'" [justify]="'between'">
-        <app-checkbox (onChange)="remember.setValue($event)">Remember</app-checkbox>
+        <app-checkbox (onChange)="remember.setValue($event)">Remember</app-checkbox
+        >
         <div class="forgot-password">Forgot password?</div>
       </Flex>
       <div class="sign-in-form-submit">
-        <div class="sign-in-form-submit-button" Button [type]="'primary'">
-          Sign In
+        <div
+          class="sign-in-form-submit-button"
+          Button
+          [type]="'primary'"
+          [disabled]="signInForm.invalid"
+          (onClick)="submitSignInForm()"
+        >
+          <ng-template [ngIf]="!isLoading" [ngIfElse]="loading">
+            Sign In
+          </ng-template>
+          <ng-template #loading>
+            <img class="icon-loading" src="../../../../../assets/Loading.svg" />
+          </ng-template>
         </div>
       </div>
     </form>
