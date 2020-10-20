@@ -1,6 +1,8 @@
 import { phoneNumberFormat } from './../../../../shared/validators/phone-number.validator';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ModalService } from 'src/app/services/modal.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -18,7 +20,9 @@ export class SignInFormComponent implements OnInit {
   @Output() onLoading = new EventEmitter<boolean>(false);
 
   constructor(
-    public _formBuilder: FormBuilder
+    public _formBuilder: FormBuilder,
+    public _modalService: ModalService,
+    public _authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -44,10 +48,6 @@ export class SignInFormComponent implements OnInit {
   submitSignInForm(): void {
     this.isLoading = true;
     this.onLoading.emit(true);
-    setTimeout(() => {
-      this.isLoading = false;
-      this.onLoading.emit(false);
-    }, 2000);
+    this._authService.signIn();
   }
-
 }
